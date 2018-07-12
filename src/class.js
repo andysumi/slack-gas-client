@@ -25,7 +25,7 @@
         'payload': JSON.stringify(options.payload) || {}
       });
 
-      return JSON.parse(response.getContentText());
+      return response.getContentText();
     };
 
     return SlackClient;
