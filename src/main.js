@@ -15,3 +15,13 @@ function create(token) { // eslint-disable-line
 function authTest() { // eslint-disable-line
   throw new Error('このメソッドは直接呼び出せません。createメソッドで取得したインスタンスより呼び出してください。');
 }
+
+/**
+ * Incomming Webhooks等を使ってメッセージを送信する
+ * @param {String} url 【必須】Incomming WebhooksやResponse URL等のURL
+ * @param {Object} params 【必須】メッセージの内容
+ * @return {Object} 実行結果
+ */
+function postMessageToUrl(url, params) { // eslint-disable-line
+  throw new Error('このメソッドは直接呼び出せません。createメソッドで取得したインスタンスより呼び出してください。');
+}

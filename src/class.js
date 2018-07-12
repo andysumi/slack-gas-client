@@ -12,6 +12,10 @@
       return this.fetch_(this.apiUrl + '/auth.test', {'method': 'post'});
     };
 
+    SlackClient.prototype.postMessageToUrl = function(url, params) {
+      return this.fetch_(url, {'method': 'post', 'payload': params});
+    };
+
     SlackClient.prototype.fetch_ = function(url, options) {
       var response = UrlFetchApp.fetch(url, {
         'method': options.method,
