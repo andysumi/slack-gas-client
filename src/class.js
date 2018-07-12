@@ -9,11 +9,10 @@
     }
 
     SlackClient.prototype.authTest = function() {
-      return this.fetch_('/auth.test', {'method': 'post'});
+      return this.fetch_(this.apiUrl + '/auth.test', {'method': 'post'});
     };
 
-    SlackClient.prototype.fetch_ = function(endPoint, options) {
-      var url = this.apiUrl + endPoint;
+    SlackClient.prototype.fetch_ = function(url, options) {
       var response = UrlFetchApp.fetch(url, {
         'method': options.method,
         'muteHttpExceptions': true,
