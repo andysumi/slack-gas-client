@@ -25,3 +25,14 @@ function authTest() { // eslint-disable-line
 function postMessageToUrl(url, params) { // eslint-disable-line
   throw new Error('このメソッドは直接呼び出せません。createメソッドで取得したインスタンスより呼び出してください。');
 }
+
+/**
+ * ダイアログを表示する
+ * https://slack.com/api/dialog.open
+ * @param {String} triggerId 【必須】トリガーのリクエストに含まれるtrigger_id
+ * @param {Object} dialog 【必須】ダイアログの内容
+ * @return {Object} 実行結果
+ */
+function openDialog(triggerId, dialog) { // eslint-disable-line
+  throw new Error('このメソッドは直接呼び出せません。createメソッドで取得したインスタンスより呼び出してください。');
+}

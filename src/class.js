@@ -16,6 +16,10 @@
       return this.fetch_(url, {'method': 'post', 'payload': params});
     };
 
+    SlackClient.prototype.openDialog = function(triggerId, dialog) {
+      return this.fetch_(this.apiUrl + '/dialog.open', {'method': 'post', 'payload': {'trigger_id': triggerId, 'dialog': dialog}});
+    };
+
     SlackClient.prototype.fetch_ = function(url, options) {
       var response = UrlFetchApp.fetch(url, {
         'method': options.method,

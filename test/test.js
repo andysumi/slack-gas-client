@@ -1,3 +1,3 @@
-function myFunction() { // eslint-disable-line
+function myFunction_() { // eslint-disable-line
 
 }
