@@ -31,6 +31,10 @@
       return this.fetch_(this.apiUrl + '/search.messages?query=' + encodeURIComponent(query) + params, { 'method': 'get' });
     };
 
+    SlackClient.prototype.getReactionsFromMessage = function (channelId, timestamp) {
+      return this.fetch_(this.apiUrl + '/reactions.get?channel=' + channelId + '&timestamp=' + timestamp, { 'method': 'get' });
+    };
+
     SlackClient.prototype.fetch_ = function (url, options) {
       var response = UrlFetchApp.fetch(url, {
         'method': options.method,

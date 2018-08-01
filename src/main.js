@@ -44,6 +44,16 @@ function openDialog(triggerId, dialog) { // eslint-disable-line no-unused-vars
  * @param {Object} options 【任意】オプション ※ドキュメント参照
  * @return {Object} 実行結果
  */
-function searchMessage(query, options) { // eslint-disable-line no-unused-vars
+function searchMessages(query, options) { // eslint-disable-line no-unused-vars
+  throw new Error('このメソッドは直接呼び出せません。createメソッドで取得したインスタンスより呼び出してください。');
+}
+
+/**
+ * メッセージのリアクションを取得する
+ * https://api.slack.com/methods/reactions.get
+ * @param {String} channelId 【必須】リアクションを取得するメッセージが投稿されたチャンネル
+ * @param {String} timestamp 【必須】リアクションを取得するメッセージのタイムスタンプ
+ */
+function getReactionsFromMessage(channelId, timestamp) { // eslint-disable-line no-unused-vars
   throw new Error('このメソッドは直接呼び出せません。createメソッドで取得したインスタンスより呼び出してください。');
 }
