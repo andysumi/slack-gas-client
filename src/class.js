@@ -20,7 +20,7 @@
       return this.fetch_(this.apiUrl + '/dialog.open', { 'method': 'post', 'payload': { 'trigger_id': triggerId, 'dialog': dialog } });
     };
 
-    SlackClient.prototype.searchMessage = function (query, options) {
+    SlackClient.prototype.searchMessages = function (query, options) {
       var params = [];
       if (options) {
         for (var key in options) {
