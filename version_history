@@ -2,3 +2,4 @@
 2 - postMessageToUrlを追加
 3 - openDialoを追加
 4 - searchMessage、getReactionsFromMessageを追加
+5 - レスポンスにstatusを追加

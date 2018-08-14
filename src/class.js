@@ -44,7 +44,10 @@
         'payload': JSON.stringify(options.payload) || {}
       });
 
-      return response.getContentText();
+      return {
+        status : response.getResponseCode(),
+        body   : response.getContentText()
+      };
     };
 
     return SlackClient;
