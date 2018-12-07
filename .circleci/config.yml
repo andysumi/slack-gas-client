@@ -4,7 +4,7 @@ references:
   container_config: &container_config
     working_directory: ~/project
     docker:
-      - image: circleci/node:10:14:1
+      - image: circleci/node:10.14.1
   create-clasp-files: &create-clasp-files
     run:
         name: create clasp setting files
