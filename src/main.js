@@ -67,6 +67,19 @@ function deleteMessage(channel, timestamp, options) { // eslint-disable-line no-
 }
 
 /**
+ * ユーザーが投稿したURLを展開する
+ * https://api.slack.com/methods/chat.unfurl
+ * @param {String} channel 【必須】メッセージが送信されたChannelのID もしくは名前
+ * @param {String} timestamp 【必須】メッセージのタイムスタンプ
+ * @param {Object} unfurls 【必須】展開するメッセージの内容(展開するURLをキーとする)
+ * @param {Object} options 【任意】オプション ※APIドキュメント参照
+ * @return {Object} 実行結果
+ */
+function unfurlUrl(channel, timestamp, unfurls, options) { // eslint-disable-line no-unused-vars
+  throw new Error('このメソッドは直接呼び出せません。createメソッドで取得したインスタンスより呼び出してください。');
+}
+
+/**
  * Incomming Webhooks等を使ってメッセージを送信する
  * @param {String} url 【必須】Incomming WebhooksやResponse URL等のURL
  * @param {Object} params 【必須】メッセージの内容
