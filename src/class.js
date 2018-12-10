@@ -35,6 +35,18 @@
       return this.fetch_(Utilities.formatString('%s/chat.postEphemeral', this.apiUrl), { method: 'post', payload: payload });
     };
 
+    SlackClient.prototype.updateMessage = function (channel, text, timestamp, options) {
+      if (!channel) throw new Error('"channel"は必須です');
+      if (!text) throw new Error('"text"は必須です');
+      if (!timestamp) throw new Error('"timestamp"は必須です');
+
+      var payload = { channel: channel, text: text, ts: timestamp };
+      for (var key in options) {
+        payload[key] = options[key];
+      }
+      return this.fetch_(Utilities.formatString('%s/chat.update', this.apiUrl), { method: 'post', payload: payload });
+    };
+
     SlackClient.prototype.postMessageToUrl = function (url, params) {
       if (!url) throw new Error('"url"は必須です');
       if (!params) throw new Error('"params"は必須です');

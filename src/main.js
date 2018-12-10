@@ -42,6 +42,19 @@ function postEphemeral(channel, text, userId, options) { // eslint-disable-line 
 }
 
 /**
+ * メッセージを更新する
+ * https://api.slack.com/methods/chat.update
+ * @param {String} channel 【必須】更新するメッセージが送信されたChannelのID もしくは名前
+ * @param {String} text 【必須】メッセージのテキスト
+ * @param {String} timestamp 【必須】更新するメッセージのタイムスタンプ
+ * @param {Object} options 【任意】オプション ※APIドキュメント参照
+ * @return {Object} 実行結果
+ */
+function updateMessage(channel, text, timestamp, options) { // eslint-disable-line no-unused-vars
+  throw new Error('このメソッドは直接呼び出せません。createメソッドで取得したインスタンスより呼び出してください。');
+}
+
+/**
  * Incomming Webhooks等を使ってメッセージを送信する
  * @param {String} url 【必須】Incomming WebhooksやResponse URL等のURL
  * @param {Object} params 【必須】メッセージの内容
