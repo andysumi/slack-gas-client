@@ -47,6 +47,17 @@
       return this.fetch_(Utilities.formatString('%s/chat.update', this.apiUrl), { method: 'post', payload: payload });
     };
 
+    SlackClient.prototype.deleteMessage = function (channel, timestamp, options) {
+      if (!channel) throw new Error('"channel"は必須です');
+      if (!timestamp) throw new Error('"timestamp"は必須です');
+
+      var payload = { channel: channel, ts: timestamp };
+      for (var key in options) {
+        payload[key] = options[key];
+      }
+      return this.fetch_(Utilities.formatString('%s/chat.delete', this.apiUrl), { method: 'post', payload: payload });
+    };
+
     SlackClient.prototype.postMessageToUrl = function (url, params) {
       if (!url) throw new Error('"url"は必須です');
       if (!params) throw new Error('"params"は必須です');
