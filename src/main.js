@@ -17,6 +17,69 @@ function authTest() { // eslint-disable-line no-unused-vars
 }
 
 /**
+ * メッセージを送信する
+ * https://api.slack.com/methods/chat.postMessage
+ * @param {String} channel 【必須】メッセージを送信するChannelのID もしくは名前
+ * @param {String} text 【必須】メッセージのテキスト
+ * @param {Object} options 【任意】オプション ※APIドキュメント参照
+ * @return {Object} 実行結果
+ */
+function postMessage(channel, text, options) { // eslint-disable-line no-unused-vars
+  throw new Error('このメソッドは直接呼び出せません。createメソッドで取得したインスタンスより呼び出してください。');
+}
+
+/**
+ * ユーザーに一時的なメッセージを送信する
+ * https://api.slack.com/methods/chat.postEphemeral
+ * @param {String} channel 【必須】メッセージを送信するChannelのID もしくは名前
+ * @param {String} text 【必須】メッセージのテキスト
+ * @param {String} userId 【必須】メッセージを受け取るユーザーのID
+ * @param {Object} options 【任意】オプション ※APIドキュメント参照
+ * @return {Object} 実行結果
+ */
+function postEphemeral(channel, text, userId, options) { // eslint-disable-line no-unused-vars
+  throw new Error('このメソッドは直接呼び出せません。createメソッドで取得したインスタンスより呼び出してください。');
+}
+
+/**
+ * メッセージを更新する
+ * https://api.slack.com/methods/chat.update
+ * @param {String} channelId 【必須】更新するメッセージが送信されたChannelのID
+ * @param {String} text 【必須】メッセージのテキスト
+ * @param {String} timestamp 【必須】更新するメッセージのタイムスタンプ
+ * @param {Object} options 【任意】オプション ※APIドキュメント参照
+ * @return {Object} 実行結果
+ */
+function updateMessage(channelId, text, timestamp, options) { // eslint-disable-line no-unused-vars
+  throw new Error('このメソッドは直接呼び出せません。createメソッドで取得したインスタンスより呼び出してください。');
+}
+
+/**
+ * メッセージを削除する
+ * https://api.slack.com/methods/chat.delete
+ * @param {String} channelId 【必須】削除するメッセージが送信されたChannelのID
+ * @param {String} timestamp 【必須】削除するメッセージのタイムスタンプ
+ * @param {Object} options 【任意】オプション ※APIドキュメント参照
+ * @return {Object} 実行結果
+ */
+function deleteMessage(channelId, timestamp, options) { // eslint-disable-line no-unused-vars
+  throw new Error('このメソッドは直接呼び出せません。createメソッドで取得したインスタンスより呼び出してください。');
+}
+
+/**
+ * ユーザーが投稿したURLを展開する
+ * https://api.slack.com/methods/chat.unfurl
+ * @param {String} channelId 【必須】メッセージが送信されたChannelのID
+ * @param {String} timestamp 【必須】メッセージのタイムスタンプ
+ * @param {Object} unfurls 【必須】展開するメッセージの内容(展開するURLをキーとする)
+ * @param {Object} options 【任意】オプション ※APIドキュメント参照
+ * @return {Object} 実行結果
+ */
+function unfurlUrl(channelId, timestamp, unfurls, options) { // eslint-disable-line no-unused-vars
+  throw new Error('このメソッドは直接呼び出せません。createメソッドで取得したインスタンスより呼び出してください。');
+}
+
+/**
  * Incomming Webhooks等を使ってメッセージを送信する
  * @param {String} url 【必須】Incomming WebhooksやResponse URL等のURL
  * @param {Object} params 【必須】メッセージの内容

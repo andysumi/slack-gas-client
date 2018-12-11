@@ -3,3 +3,4 @@
 3 - openDialoを追加
 4 - searchMessage、getReactionsFromMessageを追加
 5 - レスポンスにstatusを追加
+6 - chat関連のメソッドを追加

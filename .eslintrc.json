@@ -10,7 +10,8 @@
        "googleappsscript/googleappsscript": true
     },
     "globals": {
-      "SlackClient": false
+      "SlackClient": false,
+      "Underscore": false
     },
     "rules": {
       "semi": "warn",
