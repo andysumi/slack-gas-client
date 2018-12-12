@@ -86,7 +86,7 @@ jobs:
       - unless:
           condition: << parameters.env_is_prop >>
           steps:
-            - run: change_log=""
+            - run: change_log="development"
       - run:
           name: create version
           command: npx @google/clasp version $change_log
