@@ -30,7 +30,7 @@ commands:
           name: create << parameters.env >> clasp setting files
           command: |
             echo ${CRASP_AUTH} > ~/.clasprc.json
-            echo ${CRASP_CONFIG<< parameters.env >>} > .clasp.json
+            echo ${CRASP_CONFIG_<< parameters.env >>} > .clasp.json
 
 jobs:
   setup:
